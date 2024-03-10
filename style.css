@@ -1,0 +1,95 @@
+/**
+ * Theme Name:			Techie-Jim 2024
+ * Template:			twentytwentyfour
+ * Description:			Techie-Jim.net theme.
+ * Version:				0.0.1
+ * Author:				Jim Robinson
+ * Author URI:			https://www.techie-jim.net/
+ * Tags:				block-patterns, full-site-editing, child
+ * Text Domain:			tj_net
+ * Tested up to:		6.4
+ * Requires at least:	6.2
+ * Requires PHP:		8.1
+ * License:				GNU General Public License v2.0 or later
+ * License URI:			https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+ .post-cards, html {
+
+	&.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--wp--preset--spacing--10);
+		align-items: start;
+		grid-template-rows: masonry;
+	}
+
+	&.is-layout-flow {
+
+		& > * {
+			margin-block-start: 0;
+			margin-block-end: var(--wp--style--block-gap);
+		}
+
+	}
+
+	& > .post, & > body .actual-post {
+		background-color: var(--wp--preset--color--base-3);
+		color: var(--wp--preset--color--contrast-3);
+
+		& h1, & h2, & h3, & h4, & h5, & h6, & .wp-block-post-title {
+			color: var(--wp--preset--color--contrast-3);
+		}
+
+		a:where(:not(.wp-element-button)) {
+			color: var(--wp--preset--color--contrast-3);
+			font-weight: bold;
+		}
+
+		& .wp-block-post-featured-image {
+			& img {
+				border-radius: 0;
+			}
+		}
+
+		& .wp-block-post-terms:not(.taxonomy-category) {
+			& > a {
+				color: var(--wp--preset--color--base-3);
+				background-color: var(--wp--preset--color--contrast-3);
+			}
+		}
+
+		& .footer {
+			font-size: 0.7em;
+			margin-top: calc(-0.7 * var(--wp--style--block-gap));
+		}
+
+		&.format-quote {
+			& .wp-block-post-featured-image {
+				display: none;
+			}
+
+			& .wp-block-post-title {
+				font-family: var(--wp--preset--font-family--heading) !important;
+				background-color: var(--wp--preset--color--accent-3);
+				margin-top: calc(-1 * var(--wp--preset--spacing--30));
+				margin-left: calc(-1 * var(--wp--preset--spacing--30));
+				margin-right: calc(-1 * var(--wp--preset--spacing--30));
+				padding: var(--wp--preset--spacing--30);
+
+				& > a::before {
+					content: "“";
+				}
+
+				& > a::after {
+					content: "”";
+				}
+
+				&.wp-block-post-title, & a:where(:not(.wp-element-button)) {
+					color: var(--wp--preset--color--contrast);
+				}
+			}
+		}
+	}
+
+ }
