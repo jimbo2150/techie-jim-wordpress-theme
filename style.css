@@ -68,7 +68,7 @@
 
 		}
 
-		&.post.format-quote, &:is(body.format-quote) .actual-post {
+		&.post.format-quote, &:is(body.single-format-quote) .actual-post {
 
 			& .wp-block-post-featured-image {
 				display: none;
