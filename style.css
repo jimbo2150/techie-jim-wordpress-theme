@@ -18,7 +18,7 @@
 
 	&.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, max(320px, calc(100%/2 - var(--wp--preset--spacing--10)))), 1fr));
 		gap: var(--wp--preset--spacing--10);
 		align-items: start;
 		grid-template-rows: masonry;
